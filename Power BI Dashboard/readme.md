@@ -1,219 +1,354 @@
-# 💳 Credit Card Fraud Analysis
+💳 Credit Card Fraud Analysis --- MySQL + Power BI
 
-### SQL + Power BI | Fraud Detection • Risk Analysis • Data Visualization
+End-to-end data analytics project for identifying fraudulent
+transaction patterns, measuring financial impact, and prioritizing
+high-value transactions for investigation.
 
-An end-to-end data analytics project focused on identifying **fraudulent transaction patterns, measuring financial impact, and prioritizing high-value fraudulent transactions** using SQL and Power BI.
+🎯 Project at a Glance
 
----
+This project analyzes the PaySim financial transaction dataset using
+MySQL, SQL analytics, Power BI, and DAX.
 
-## 🎯 Project Objective
+The analysis moves from raw transaction data to business-focused fraud
+insights:
 
-The goal of this project is to analyze financial transactions and answer three key questions:
+Raw Data → SQL Analysis → Fraud Patterns → Risk Analysis → Power BI
+Dashboard → Business Recommendations
 
-> 🔍 **Where is fraud happening?**
-> 💰 **What is the financial impact?**
-> 🚨 **Which fraudulent transactions should be investigated first?**
+The project answers three key questions:
 
----
+🔍 Where is fraud happening?
+💰 What is the financial impact?
+🚨 Which fraudulent transactions should be investigated first?
 
-## 🛠️ Tools Used
+🏢 Business Problem
 
-| Tool            | Purpose                       |
-| --------------- | ----------------------------- |
-| 🗄️ **MySQL**   | Data analysis and SQL queries |
-| 📊 **Power BI** | Interactive dashboard         |
-| 🧮 **DAX**      | KPIs and calculated measures  |
-| 🐙 **GitHub**   | Project documentation         |
+Financial institutions process a large number of transactions every day,
+making manual identification of suspicious activity difficult.
 
----
+Although fraudulent transactions represent a small proportion of the
+overall transaction population, they can create significant financial
+losses and reputational risk.
 
-# 📊 Power BI Dashboard
+This project analyzes transaction characteristics such as:
 
-The dashboard follows a simple analytical journey:
+Transaction type
 
-### **Overview → Investigation & Risk Analysis**
+Transaction amount
 
----
+Sender and receiver balances
 
-## 📄 Page 1 — Credit Card Fraud Analysis
+Fraud indicators
 
-**Purpose:** Get a complete overview of fraudulent activity and identify major patterns.
+Transaction steps
 
-### 📌 Key KPIs
+Transaction frequency
 
-| Metric                   |       Value |
-| ------------------------ | ----------: |
-| Total Transactions       |   **6.36M** |
-| Total Transaction Amount |   **1.14T** |
-| Fraudulent Transactions  |      **8K** |
-| Fraud Rate               |   **0.13%** |
-| Fraud Amount             | **12.06bn** |
+The objective is to convert these transaction-level records into
+fraud-monitoring indicators and actionable risk insights.
 
-### 🔎 What the page analyzes
+🗂️ Dataset
 
-* 📈 **Fraud Per Hour** — fraudulent activity across transaction steps
-* 🔄 **Fraud Cases by Transaction Type**
-* 💰 **Transaction-Type Amount Analysis**
-* 🍩 **Fraud vs Genuine Transactions**
+The project uses the PaySim financial transaction dataset.
 
-> **Page 1 answers:**
-> **“What is happening with fraud overall?”**
+Important fields
 
-### 🖼️ Dashboard Preview
+Field              Description
 
-Page 1 - Credit Card Fraud Analysis
+step             Transaction time step
+type             Transaction type
+amount           Transaction amount
+nameOrig         Originating account
+oldbalanceOrg    Original sender balance
+newbalanceOrig   Sender balance after transaction
+nameDest         Destination account
+oldbalanceDest   Original receiver balance
+newbalanceDest   Receiver balance after transaction
+isFraud          Fraud indicator
+isFlaggedFraud   Existing fraud flag
 
----
+🛠️ Tools & Technologies
 
-# 🚨 Page 2 — Fraud Investigation & Risk Analysis
+Tool              Purpose
 
-**Purpose:** Move from overall fraud monitoring to **detailed risk investigation**.
+🗄️ MySQL      Data preparation, querying and analysis
+🔍 SQL        Fraud pattern and risk analysis
+📊 Power BI   Interactive fraud dashboard
+🧮 DAX        KPIs, calculated measures and risk table
+🐙 GitHub     Project documentation and version control
 
-### 📌 Key KPIs
+🔍 SQL Analysis
 
-| Metric                  |       Value |
-| ----------------------- | ----------: |
-| Fraudulent Transactions |      **8K** |
-| Fraud Amount            | **12.06bn** |
-| Average Fraud Amount    |   **1.47M** |
-| Highest Fraud Amount    |  **10.00M** |
+SQL forms the analytical foundation of the project.
 
-### 🔎 What the page analyzes
+Key analysis performed
 
-* 💰 **Fraud Amount by Transaction Type**
-* 📊 **Fraud Cases by Transaction Type**
-* 🚨 **High-Value Fraudulent Transactions**
-* 🎛️ **Payment Type filtering**
-* 🔢 **Step-level filtering**
+Transaction volume analysis
 
-The **High-Value Fraudulent Transactions** table focuses on the **Top 20 fraudulent transactions by transaction amount**, helping identify transactions that may require closer investigation.
+Transaction amount analysis
 
-> **Page 2 answers:**
-> **“Which fraudulent transactions require closer investigation?”**
+Fraudulent transaction identification
 
-### 🖼️ Dashboard Preview
+Fraud rate calculation
 
-Page 2 - Fraud Investigation & Risk Analysis
----
+Fraud amount analysis
 
-# 🔄 Dashboard Flow
+Fraud analysis by transaction type
 
-```text
-                TRANSACTION DATA
+Fraud trends across transaction steps
+
+Sender and receiver balance analysis
+
+High-value fraudulent transaction identification
+
+Risk-focused transaction analysis
+
+Transaction-frequency and repeated-activity analysis
+
+SQL concepts used
+
+The project applies practical SQL techniques including:
+
+CASE Statements · Aggregations · Subqueries · CTEs · Joins ·
+Window Functions
+
+These techniques transform raw transaction records into meaningful fraud
+and risk indicators.
+
+📊 Power BI Dashboard
+
+The Power BI dashboard follows a simple analytical journey:
+
+Overview → Investigation & Risk Analysis
+
+📄 Page 1 --- Credit Card Fraud Analysis
+
+🎯 Purpose
+
+Page 1 provides a high-level view of fraudulent activity, helping
+users understand the overall fraud situation and identify major
+patterns.
+
+📌 Dashboard KPIs
+
+KPI                                Value
+
+Total Transactions             6.36M
+Total Transaction Amount       1.14T
+Fraudulent Transactions           8K
+Fraud Rate                     0.13%
+Fraud Amount                 12.06bn
+
+🔎 Analysis
+
+📈 Fraud Per Hour
+Shows how fraudulent transaction activity varies across transaction
+steps.
+
+🔄 Fraud Cases by Transaction Type
+Highlights transaction types associated with fraudulent activity.
+
+💰 Transaction-Type Amount Analysis
+Provides a monetary view of transaction activity across transaction
+types.
+
+🍩 Fraud vs Genuine Transactions
+Compares fraudulent and genuine transaction volumes.
+
+Page 1 answers:
+### "What is happening with fraud overall?"
+
+🖼️ Dashboard Preview
+
+Add your Page 1 screenshot here:
+
+Screenshots/Page_1_Credit_Card_Fraud_Analysis.png
+
+🚨 Page 2 --- Fraud Investigation & Risk Analysis
+
+🎯 Purpose
+
+Page 2 moves from overall fraud monitoring to detailed investigation
+and risk prioritization.
+
+📌 Dashboard KPIs
+
+KPI                               Value
+
+Fraudulent Transactions          8K
+Fraud Amount                12.06bn
+Average Fraud Amount          1.47M
+Highest Fraud Amount         10.00M
+
+🔎 Analysis
+
+💰 Fraud Amount by Transaction Type
+Compares the financial impact of fraud across transaction types.
+
+📊 Fraud Cases by Transaction Type
+Analyzes fraud exposure across transaction types.
+
+🚨 High-Value Fraudulent Transactions
+Displays the highest-value fraudulent transactions for closer
+investigation.
+
+🎛️ Payment Type Filter
+Allows users to focus the investigation on selected payment types.
+
+🔢 Step Filter
+Allows users to investigate selected transaction steps.
+
+🚨 High-Value Risk Analysis
+
+A dedicated High-Value Risk Transactions table is created using DAX to
+identify the Top 20 fraudulent transactions ranked by transaction
+amount.
+
+This helps move the analysis from simply identifying fraud to
+prioritizing transactions based on financial impact.
+
+Page 2 answers:
+### "Which fraudulent transactions require closer investigation?"
+
+🖼️ Dashboard Preview
+
+Add your Page 2 screenshot here:
+
+Screenshots/Page_2_Fraud_Investigation_Risk_Analysis.png
+
+🔄 Dashboard Flow
+
+                  TRANSACTION DATA
+                         │
+                         ▼
+          ┌──────────────────────────┐
+          │ PAGE 1 — OVERVIEW        │
+          │                          │
+          │ Fraud Volume             │
+          │ Fraud Rate               │
+          │ Fraud Trends             │
+          │ Transaction Types        │
+          │ Fraud vs Genuine         │
+          └────────────┬─────────────┘
                        │
                        ▼
-        ┌───────────────────────────┐
-        │ PAGE 1 — OVERVIEW         │
-        │                           │
-        │ Fraud Volume              │
-        │ Fraud Rate                │
-        │ Fraud Trends              │
-        │ Transaction Types         │
-        └─────────────┬─────────────┘
-                      │
-                      ▼
-             IDENTIFY PATTERNS
-                      │
-                      ▼
-        ┌───────────────────────────┐
-        │ PAGE 2 — INVESTIGATION    │
-        │                           │
-        │ Fraud Amount              │
-        │ Average / Highest Fraud   │
-        │ High-Value Transactions   │
-        │ Risk Prioritization       │
-        └─────────────┬─────────────┘
-                      │
-                      ▼
-              INVESTIGATION
-```
+              IDENTIFY PATTERNS
+                       │
+                       ▼
+          ┌──────────────────────────┐
+          │ PAGE 2 — INVESTIGATION   │
+          │                          │
+          │ Fraud Amount             │
+          │ Average / Highest Fraud  │
+          │ High-Value Transactions  │
+          │ Risk Prioritization      │
+          └────────────┬─────────────┘
+                       │
+                       ▼
+               INVESTIGATION
 
-### Why two pages?
+Why two pages?
 
-**Page 1 = Monitor & Understand**
+Page 1 --- Monitor & Understand
+Provides the overall fraud picture and identifies important patterns.
 
-Provides the overall fraud picture and highlights important patterns.
+Page 2 --- Investigate & Prioritize
+Drills down into financial impact and high-value fraudulent
+transactions.
 
-**Page 2 = Investigate & Prioritize**
+The analytical progression
 
-Drills down into the financial impact and identifies high-value fraudulent transactions.
+Overview → Pattern Identification → Investigation → Risk
+Prioritization
 
-This creates a clear progression:
+💡 Key Findings & Insights
 
-**Overview → Pattern Identification → Investigation → Risk Prioritization**
+The SQL analysis and dashboard highlight several important fraud-risk
+patterns.
 
----
+1. ⚖️ Fraud is an imbalanced-data problem
 
-# 🔍 SQL Analysis
+Fraudulent transactions represent a small share of the overall
+transaction population, making it important to focus on risk
+indicators rather than transaction volume alone.
 
-SQL was used as the analytical foundation of the project.
+2. 🔄 Fraud is concentrated in particular transaction types
 
-### Key analysis performed
+Fraud activity is not evenly distributed across all transaction
+categories. Transaction-type analysis can therefore help identify
+areas requiring additional monitoring.
 
-* Transaction volume analysis
-* Transaction amount analysis
-* Fraudulent transaction identification
-* Fraud rate calculation
-* Fraud amount analysis
-* Fraud analysis by transaction type
-* Fraud trend analysis across transaction steps
-* High-value fraudulent transaction identification
-* Risk-focused analysis
+3. 💰 Transaction amount is an important risk indicator
 
-The SQL analysis was then transformed into **Power BI KPIs and visualizations**.
+Unusually large or abnormal transactions deserve additional scrutiny
+because transaction value can significantly increase the potential
+financial impact of fraud.
 
----
+4. 🏦 Balance movements can provide additional signals
 
-# 💡 Key Business Insights
+Changes in sender and receiver balances can reveal unusual or
+inconsistent transaction behavior that may be useful when evaluating
+fraud risk.
 
-The analysis helps identify:
+5. 🔁 Repeated or unusual activity can indicate risk
 
-### 💰 Financial Impact
+Transaction frequency and repeated activity can help identify accounts
+or transaction patterns that may require closer monitoring.
 
-The dashboard measures the overall monetary impact of fraudulent transactions.
+6. 🎯 Multiple indicators provide stronger analysis
 
-### 🔄 Fraud Patterns
+Combining:
 
-Transaction types and transaction steps can be analyzed to identify areas with higher fraud activity.
+Transaction Type + Amount + Balance Behavior + Transaction Frequency +
+Fraud Flags
 
-### 🚨 High-Value Risk
+provides a stronger basis for identifying suspicious activity than
+relying on a single indicator.
 
-The investigation page highlights the highest-value fraudulent transactions so that investigation efforts can be prioritized.
+🛡️ Business Recommendations
 
-### 📊 Fraud Monitoring
+Based on the analysis, organizations can consider:
 
-The dashboard provides a quick comparison between fraudulent and genuine transactions.
+🚨 Prioritizing investigation of high-value fraudulent
+transactions
 
----
+🔄 Increasing monitoring of transaction types with higher fraud
+exposure
 
-# 🛡️ Business Recommendations
+📈 Monitoring unusual activity across transaction steps
 
-Based on the analysis, organizations can:
+💰 Creating automated alerts for suspicious high-value transactions
 
-* Prioritize investigation of **high-value fraudulent transactions**
-* Increase monitoring of transaction types showing higher fraud exposure
-* Monitor unusual activity across transaction steps
-* Introduce automated alerts for suspicious high-value transactions
-* Combine transaction-level analysis with customer/account behavior for stronger fraud detection
+🏦 Monitoring abnormal sender/receiver balance movements
 
----
+🔁 Investigating repeated or unusual transaction activity
 
-# 🧠 Skills Demonstrated
+🎯 Combining multiple risk indicators rather than relying on a
+single fraud signal
 
-**Technical**
-`SQL` · `MySQL` · `Power BI` · `DAX` · `Data Visualization`
+📊 Using interactive dashboards to support faster fraud-monitoring
+decisions
 
-**Analytical**
-`Fraud Analysis` · `Risk Analysis` · `Trend Analysis` · `Transaction Analysis` · `KPI Development`
+🧠 Skills Demonstrated
 
-**Business**
-`Risk Prioritization` · `Business Insights` · `Data-Driven Recommendations`
+💻 Technical Skills
 
----
+SQL · MySQL · Power BI · DAX · Data Cleaning ·
+Data Visualization
 
-# 📁 Project Structure
+📊 Analytical Skills
 
-```text
+Fraud Analysis · Risk Analysis · Trend Analysis ·
+Transaction Analysis · KPI Development ·
+High-Value Transaction Analysis
+
+💼 Business Skills
+
+Risk Identification · Risk Prioritization · Business Insights ·
+Data-Driven Recommendations
+
+📁 Project Structure
+
 Credit-Card-Fraud-Analysis/
 │
 ├── Dataset/
@@ -230,35 +365,40 @@ Credit-Card-Fraud-Analysis/
 │   └── Page_2_Fraud_Investigation_Risk_Analysis.png
 │
 └── README.md
-```
 
----
+🚀 Project Workflow
 
-# 🚀 Project Workflow
+Raw Transaction Data
+        ↓
+Data Cleaning & Preparation
+        ↓
+SQL Exploration & Analysis
+        ↓
+Fraud Pattern Identification
+        ↓
+Risk & High-Value Transaction Analysis
+        ↓
+Power BI Dashboard
+        ↓
+Business Insights
+        ↓
+Recommendations
 
-**Raw Data**
-↓
-**Data Preparation**
-↓
-**SQL Analysis**
-↓
-**Fraud Pattern Identification**
-↓
-**Risk & High-Value Transaction Analysis**
-↓
-**Power BI Dashboard**
-↓
-**Business Insights & Recommendations**
+⭐ Conclusion
 
----
+This project demonstrates how MySQL, SQL analytics, Power BI, and
+DAX can be combined to transform a large financial transaction dataset
+into practical fraud-monitoring insights.
 
-## ⭐ Conclusion
+The analysis progresses from:
 
-This project demonstrates an end-to-end approach to **fraud analytics**, combining SQL-based analysis with Power BI visualization.
+Raw Transaction Data → Fraud Patterns → Financial Impact → Risk
+Prioritization → Investigation
 
-The dashboard moves from:
+The Power BI dashboard complements the SQL analysis by providing an
+interactive view of both overall fraud activity and high-value
+fraudulent transactions.
 
-> **“What is happening?” → “Why does it matter?” → “What should we investigate?”**
-
-This makes the analysis useful for **fraud monitoring, financial risk analysis, and investigation prioritization**.
-
+Overall, the project demonstrates practical skills in SQL, data
+analysis, fraud detection, risk analysis, data visualization, and
+business problem-solving.
