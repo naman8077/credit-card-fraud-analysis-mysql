@@ -61,7 +61,7 @@ The dashboard follows a simple analytical journey:
 
 ### 🖼️ Dashboard Preview
 
-![Page 1 - Credit Card Fraud Analysis](Screenshots/Page_1_Credit_Card_Fraud_Analysis.png)
+Page 1 - Credit Card Fraud Analysis
 
 ---
 
@@ -93,8 +93,7 @@ The **High-Value Fraudulent Transactions** table focuses on the **Top 20 fraudul
 
 ### 🖼️ Dashboard Preview
 
-![Page 2 - Fraud Investigation & Risk Analysis](Screenshots/Page_2_Fraud_Investigation_Risk_Analysis.png)
-
+Page 2 - Fraud Investigation & Risk Analysis
 ---
 
 # 🔄 Dashboard Flow
